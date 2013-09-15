@@ -13,6 +13,7 @@ gem 'jbuilder', '~> 1.2'
 
 group :production do
   gem 'rails_12factor'
+  gem 'unicorn'
 end
 
 group :development, :test do

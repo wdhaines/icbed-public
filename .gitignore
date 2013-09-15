@@ -1,2 +1,13 @@
 .idea/scopes/scope_settings.xml
 .idea/workspace.xml
+.idea/.generators
+.idea/.rakeTasks
+.idea/encodings.xml
+.idea/icbed-public.iml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+icbed-rails/.idea/icbed-rails.iml
+icbed-rails/.idea/scopes/scope_settings.xml
+icbed-rails/.idea/workspace.xml
+.env
