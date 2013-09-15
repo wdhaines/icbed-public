@@ -1,0 +1,23 @@
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: icbed-rails_development
+  pool: 5
+  username: icbed-rails
+  password:
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  database: icbed-rails_test
+  pool: 5
+  username: icbed-rails
+  password:
+
+production:
+  adapter: postgresql
+  encoding: unicode
+  database: icbed-rails_production
+  pool: 5
+  username: icbed-rails
+  password:
