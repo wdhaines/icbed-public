@@ -1,11 +1,7 @@
 'use strict';
 
-angular.module('jsApp')
-  .controller('MainCtrl', function ($scope) {
-    $scope.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma',
-      'Will'
-    ];
+angular.module('icbed.app').
+
+  controller('MainCtrl', function ($scope) {
+
   });

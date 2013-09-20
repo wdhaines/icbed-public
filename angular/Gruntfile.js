@@ -98,6 +98,7 @@ module.exports = function (grunt) {
       },
       test: {
         options: {
+          port: 9001,
           middleware: function (connect) {
             return [
               mountFolder(connect, '.tmp'),
@@ -108,6 +109,7 @@ module.exports = function (grunt) {
       },
       dist: {
         options: {
+          force: true,
           middleware: function (connect) {
             return [
               mountFolder(connect, yeomanConfig.dist)
@@ -123,9 +125,6 @@ module.exports = function (grunt) {
     },
     clean: {
       dist: {
-        options: {
-          force: true
-        },
         files: [{
           dot: true,
           src: [

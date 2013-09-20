@@ -1,7 +1,20 @@
 'use strict';
 
-angular.module('jsApp', ['ui.bootstrap'])
-  .config(function ($routeProvider) {
+angular.module('icbed.external-services', []).
+
+  value('externalInit', function () {
+    WebFont.load({
+      google: {
+        families: ['Roboto Slab', 'Roboto Condensed', 'Roboto']
+      }
+    });
+  });
+
+angular.module('icbed.services', ['ui.bootstrap']);
+
+angular.module('icbed.app', ['icbed.external-services', 'icbed.services']).
+
+  config(function ($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/main.html',
@@ -10,4 +23,10 @@ angular.module('jsApp', ['ui.bootstrap'])
       .otherwise({
         redirectTo: '/'
       });
+  }).
+
+  run(function (externalInit) {
+    externalInit();
   });
+
+
