@@ -125,6 +125,9 @@ module.exports = function (grunt) {
     },
     clean: {
       dist: {
+        options: {
+          force: true
+        },
         files: [{
           dot: true,
           src: [
