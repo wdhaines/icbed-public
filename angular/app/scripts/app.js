@@ -10,7 +10,7 @@ angular.module('icbed.external-services', []).
     });
   });
 
-angular.module('icbed.services', ['ui.bootstrap', 'ngResource']);
+angular.module('icbed.services', ['ui.bootstrap', 'ngResource', 'ngRoute']);
 
 angular.module('icbed.app', ['icbed.external-services', 'icbed.services']).
 
