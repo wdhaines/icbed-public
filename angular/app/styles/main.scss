@@ -10,8 +10,17 @@ html, body {
 body {
   font-family: "Roboto Condensed", Helvetica, Arial, sans-serif;
   color: #333;
+  padding-top: 20px;
 
   h1, h2, h3, h4, h5, h6 {
     font-family: "Roboto Slab", "Arial Black", sans-serif;
+  }
+}
+
+.hidden-xs-inline {
+  display: inline !important;
+
+  @media (max-width: 767px) {
+    display: none !important;
   }
 }

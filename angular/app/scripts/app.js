@@ -3,11 +3,15 @@
 angular.module('icbed.external-services', []).
 
   value('externalInit', function () {
-    WebFont.load({
-      google: {
-        families: ['Roboto Slab', 'Roboto Condensed', 'Roboto']
-      }
-    });
+    try {
+      WebFont.load({
+        google: {
+          families: ['Roboto Slab', 'Roboto Condensed', 'Roboto']
+        }
+      });
+    } catch (e) {
+     console.log("Failed to load fonts: " + e);
+    }
   });
 
 angular.module('icbed.services', ['ui.bootstrap', 'ngResource', 'ngRoute']);

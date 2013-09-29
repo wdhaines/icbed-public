@@ -19,9 +19,9 @@
     <div class="container" >
       <div class="row">
         <div class="col-md-8">
-          <h1>Will Haines—www.icbed.com</h1>
+          <h1>Will Haines<span class="hidden-xs-inline">—www.icbed.com</span></h1>
         </div>
-        <div class="col-md-4">
+        <div class="col-md-4 hidden-sm hidden-xs">
           <blockquote class="pull-right">
             <p>…it can be easily done.</p>
             <small>Bob Dylan <cite title="Source Title">“Highway 61 Revisited”</cite></small>
@@ -29,7 +29,8 @@
         </div>
       </div>
       <div class="row">
-        <h3 class="browsehappy col-md-12">You are using an <strong>outdated</strong> browser.</h3>
+        <h3 class="browsehappy col-md-12"><span class=".glyphicon .glyphicon-warning-sign"></span>
+          You are using an <strong>outdated</strong> browser.</h3>
         <p class="col-md-12">Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
       </div>
       <div class="row">
@@ -47,7 +48,7 @@
       <script src="bower_components/json3/lib/json3.min.js"></script>
     <![endif]-->
 
-    <div class="container" data-ng-view=""></div>
+    <div class="container" data-ng-view></div>
 
     <!-- Google Analytics -->
     <script>

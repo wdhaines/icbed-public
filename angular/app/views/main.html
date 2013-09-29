@@ -1,11 +1,43 @@
 <div class="row">
   <div class="col-md-8">
-    <h1>{{profile.name}}—{{profile.website}}</h1>
+    <h1>{{profile.name}}<span class="hidden-xs-inline">—{{profile.website}}</span></h1>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-4 hidden-sm hidden-xs">
     <blockquote class="pull-right">
       <p>…it can be easily done.</p>
       <small>Bob Dylan <cite title="Source Title">“Highway 61 Revisited”</cite></small>
     </blockquote>
   </div>
 </div>
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#">Home</a>
+  </div>
+
+  <div class="collapse navbar-collapse navbar-ex1-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Code</a></li>
+      <li><a href="#">Publications</a></li>
+      <li><a href="#">Bio</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">External Links <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li data-ng-show="profile.github_url"><a href="{{profile.github_url}}">Github</a></li>
+          <li data-ng-show="profile.linkedin_url"><a href="{{profile.linkedin_url}}">LinkedIn</a></li>
+        </ul>
+      </li>
+    </ul>
+    <form class="navbar-form navbar-right" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</nav>
