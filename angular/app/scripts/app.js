@@ -14,19 +14,18 @@ angular.module('icbed.external-services', []).
     }
   });
 
-angular.module('icbed.services', ['ui.bootstrap', 'ngResource', 'ngRoute']);
+angular.module('icbed.services', ['ui.bootstrap', 'ngResource', 'ui.router']);
 
 angular.module('icbed.app', ['icbed.external-services', 'icbed.services']).
 
-  config(function ($routeProvider) {
-    $routeProvider
-      .when('/', {
-        templateUrl: 'views/main.html',
+  config(function($stateProvider, $urlRouterProvider) {
+    $urlRouterProvider.otherwise("/");
+    $stateProvider
+      .state('home', {
+        url: "/",
+        templateUrl: "views/main.html",
         controller: 'MainCtrl'
       })
-      .otherwise({
-        redirectTo: '/'
-      });
   }).
 
   run(function (externalInit) {
