@@ -18,14 +18,17 @@ angular.module('icbed.services', ['ui.bootstrap', 'ngResource', 'ui.router']);
 
 angular.module('icbed.app', ['icbed.external-services', 'icbed.services']).
 
-  config(function($stateProvider, $urlRouterProvider) {
+  config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     $urlRouterProvider.otherwise("/");
     $stateProvider
       .state('home', {
         url: "/",
         templateUrl: "views/main.html",
         controller: 'MainCtrl'
-      })
+      });
+    $locationProvider
+      .html5Mode(true)
+      .hashPrefix('!');
   }).
 
   run(function (externalInit) {
